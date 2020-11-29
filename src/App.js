@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { TextField, makeStyles, Button, CircularProgress, Card, CardContent } from '@material-ui/core';
+import { HomeHeader } from './components/Header';
 
 const useStyles = makeStyles((theme) => ({
     title: {
@@ -144,6 +145,7 @@ function App() {
 
     return (
         <div className={classes.body}>
+            <HomeHeader />
             <div className={classes.queryCont}>
                 <p className={classes.query}>https://4u1ljf1age.execute-api.us-east-1.amazonaws.com/prod1/test</p>
                 <TextField onKeyDown={keyDownHandler} id='queryText' label='sampleEndpoint' variant='standard' defaultValue='?testing=1'></TextField>
