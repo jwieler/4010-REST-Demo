@@ -71,6 +71,9 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    image: {
+        maxHeight: 400
+    }
 }));
 
 function App() {
@@ -132,7 +135,7 @@ function App() {
                 <p>ID: {responseJSON.testID}</p>
                 <p>Likes: {responseJSON.likes}</p>
                 <p>Dislikes: {responseJSON.dislikes}</p>
-                <img src={responseJSON.image} alt='profile' />
+                <img className={classes.image} src={responseJSON.image} alt='profile' />
             </div>
         );
     }
